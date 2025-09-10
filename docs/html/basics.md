@@ -68,7 +68,7 @@ HTML-Elemente können ineinander geschachtelt werden und bilden dadurch eine <ma
 !!! example "Darstellung eines DOM" 
 
     <figure markdown="span">
-      ![DOM](/assets/images/DOM.svg)
+      ![DOM](../assets/images/DOM.svg)
       <figcaption>Darstellung des DOM aus dem obigen Beispiel</figcaption>
     </figure>
 
