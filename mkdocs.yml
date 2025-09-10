@@ -1,0 +1,98 @@
+# Project Information
+site_name: RDF WebDev Course
+site_author: Jonas Malassa
+site_description: A beginner-friendly web development course created with Material for MkDocs.
+
+# Repository
+repo_name: 
+repo_url: 
+
+# Copyright 
+copyright: Copyright &copy; 2025 Jonas Malassa
+
+# Configuration
+theme:
+  name: material
+  language: de
+  favicon: assets/favicon.ico
+  logo: assets/logo.webp
+  icon:
+    logo: material/web-check
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: purple
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: purple
+      accent: amber
+  font:
+    text: Space Grotesk
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.tabs
+
+
+# Plugins
+plugins:
+  - tags
+  - meta
+  - search
+
+# Additional configuration
+extra:
+  tags:
+    HTML5: html
+    CSS3: css
+    JavaScript: js
+
+# Extensions
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
+# Navigation
+nav:
+  - Introduction:
+    - Overview: index.md
+    - How the web works: web.md
+    - MkDocs: mkdocs.md
+  - HTML:
+    - Basics: html/basics.md
+    - Elements: html/elements.md
+    - Forms: html/forms.md
+  - CSS:
+    - Basics: css/basics.md
+    - Selectors: css/selectors.md
+    - Box Model: css/box-model.md
+  - JavaScript:
+    - Basics: js/basics.md
+    - DOM Manipulation: js/dom.md
+    - Events: js/events.md
+  - Resources: resources.md
