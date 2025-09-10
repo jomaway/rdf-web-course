@@ -83,6 +83,7 @@ nav:
     - Overview: index.md
     - How the web works: web.md
     - MkDocs: mkdocs.md
+    - VSCode Setup: vscode-setup.md
   - HTML:
     - Basics: html/basics.md
     - Elements: html/elements.md
