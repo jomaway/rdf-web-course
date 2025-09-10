@@ -1,11 +1,12 @@
 # Project Information
 site_name: RDF WebDev Course
 site_author: Jonas Malassa
+site_url: https://jomaway.github.io/rdf-web-course/
 site_description: A beginner-friendly web development course created with Material for MkDocs.
 
 # Repository
-repo_name: 
-repo_url: 
+repo_name: jomaway/rdf-web-course
+repo_url: https://github.com/jomaway/rdf-web-course
 
 # Copyright 
 copyright: Copyright &copy; 2025 Jonas Malassa
