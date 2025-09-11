@@ -16,7 +16,9 @@ icon: material/book
 
 <div class="grid cards" markdown>
 
-- ![Browswer](assets/logos/browser.svg){ width=100 align=left}  Grundlagen 
+- ![MKDocs](assets/logos/mkdocs.svg){ width=100 align=left}  Material for MKDocs
+
+    <small>A static Site Generator</small>
 
 - ![HTML5](assets/logos/html5.svg){ width=100 align=left} Inhalt und Struktur
 
