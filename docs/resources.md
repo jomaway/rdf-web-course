@@ -14,6 +14,11 @@ Auf dieser Seite finden Sie :link: Links zu anderen Kursen und Materialien über
 - [MkDocs](https://www.mkdocs.org/) (Original Project)
 - [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/)
 
+* [MkDocs-Konfig](https://www.mkdocs.org/user-guide/configuration/)
+
+### :simple-yaml: YAML
+
+* [YAML-Tutorial (engl.)](https://yaml.org/spec/1.2/spec.html)
 
 
 ### :fontawesome-brands-markdown: Markdown

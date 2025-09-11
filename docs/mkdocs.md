@@ -1,47 +1,138 @@
 ---
 icon: simple/materialformkdocs
+tags:
+    - MarkDown
+    - YAML
 ---
 # :simple-materialformkdocs: Material for MkDocs 
 
 
 !!! abstract "Was ist MkDocs?"
 
-    Eine einfache möglichkeit um eine schöne Dokumentationsseite für ihr Projekt zu erstellen.
+    Eine einfache Möglichkeit um eine schöne Dokumentationsseite für ihr Projekt zu erstellen. Der Inhalt wird in Markdown-Dateien verfasst und dann zu einer statischen Webseite umgewandelt. 
     
     :link: [Offizielle Webseite](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
-
-## Einrichten
-
-1. Projekt erstellen: `uv init my-big-project`
-2. In Verzeichnis wechseln: `cd my-big-project`
-2. MKDocs hinzufügen: `uv add mkdocs-material`
-4. Neues MKDocs projekt anlegen `uv run mkdocs new .`
-5. Testversion öffnen `uv run mkdocs serve`
-
-
-### Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-### Project layout
-
-    pyproject.toml  # The projects config file which was created by uv.
-    mkdocs.yml      # The mkdocs configuration file.
-    docs/
-        index.md    # The documentation homepage.
-        ...         # Other markdown pages, images and other files.
-
-
-## Konfigurieren
-
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xlABhbnNrfI?si=HqoYkVmZGuMznjB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <figcaption><a href="https://www.youtube.com/watch?v=xlABhbnNrfI">Full Video Tutorial</a>
 </figcaption></figure>
+
+## Eine neue Seite anlegen.
+
+!!! task "Schritte"
+
+    1. Projekt erstellen: `uv init my-big-project`
+    2. In Verzeichnis wechseln: `cd my-big-project`
+    2. MKDocs hinzufügen: `uv add mkdocs-material`
+    4. Neues MKDocs projekt anlegen `uv run mkdocs new .`
+    5. Testversion öffnen `uv run mkdocs serve`
+
+<div class="grid cards" markdown>
+
+- ### :octicons-command-palette-16: Commands
+ 
+    ---
+
+    Eine kleine Übersicht der wichtigsten Befehle.
+
+    * `mkdocs new [dir-name]` - Create a new project.
+    * `mkdocs serve` - Start the live-reloading docs server.
+    * `mkdocs build` - Build the documentation site.
+    * `mkdocs -h` - Print help message and exit.
+
+- ### :octicons-file-directory-16: Project layout
+    ---
+
+    Nach dem erstellen eines neuen Projekts sollten Sie folgende Verzeichnisstruktur vorfinden.
+
+        pyproject.toml  # The projects config file which was created by uv.
+        mkdocs.yml      # The mkdocs configuration file.
+        docs/
+            index.md    # The documentation homepage.
+            ...         # Other markdown pages, images and other files.
+
+</div>
+
+
+## YAML – Das Config-Format für MkDocs
+
+**Wofür?**
+MkDocs liest seine Einstellungen aus `mkdocs.yml` (oder `mkdocs.yaml`).
+
+!!! info "Wichtigste Grundlagen"
+
+    * **Struktur**: Einrückung mit **2 Leerzeichen**, keine Tabs.
+    * **Key–Value**: `key: value`
+    * **Listen**:
+
+    ```yaml
+    nav:
+        - Home: index.md
+        - Über: about.md
+    ```
+    * **Kommentare**: `# Dies ist ein Kommentar`
+    * **Datentypen**: Strings, Zahlen, Bool (`true`/`false`), Listen, verschachtelte Maps.
+
+??? example "Typische MkDocs-Keys"
+
+    ```yaml
+    site_name: Meine Doku
+    theme:
+    name: material
+    ```
+
+**Mehr Infos**
+
+* [YAML-Tutorial (engl.)](https://yaml.org/spec/1.2/spec.html)
+* [MkDocs-Konfig](https://www.mkdocs.org/user-guide/configuration/)
+
+## :octicons-markdown-16: Markdown – Inhalte der Doku
+
+**Wofür?**
+Alle Seiten liegen als `.md`-Dateien vor.
+
+!!! info "Basis-Syntax"
+
+    - **Überschriften**: `# H1`, `## H2`, `### H3`
+    - **Textformat**: `**fett**`, `*kursiv*`, `` `Code` ``
+    - **Listen**:
+        - Ungeordnet: `- Item`
+        - Geordnet: `1. Item`
+
+    - **Links/Bilder**:
+        - `[Titel](https://example.com)`
+        - `![Alt-Text](bild.png)`
+
+    - **Codeblöcke**:
+        ````
+        ```python
+        print("Hallo Welt")
+        ```
+        ````
+
+??? tip "Praktische Erweiterungen (je nach Theme)"
+
+    - **Tabellen**:
+
+    ```md
+    | Spalte1 | Spalte2 |
+    |---------|---------|
+    | A       | B       |
+    ```
+    
+    - Hinweisboxen (Material for MkDocs):
+
+    ```md
+    !!! note
+        Dies ist ein Hinweis.
+    ```
+
+**Mehr Infos**
+
+* [Markdown-Guide (de)](https://www.markdownguide.org/basic-syntax/)
+* [MkDocs mit Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/)
+
 
 
 ## Veröffentlichen
