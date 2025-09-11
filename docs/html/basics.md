@@ -13,7 +13,7 @@ Eine _Auszeichnungssprache (Markup Language)_ ist eine Computersprache, die verw
 <div class="annotate" markdown>
 ``` html title="Ein sehr einfaches HTML Document"
 <!DOCTYPE html> (1)
-<html> (2)
+<html lang="de"> (2)
 
   <head> (3)
     <title>RDF - Rudolf Diesel Fachschule</title> (4)
@@ -29,7 +29,7 @@ Eine _Auszeichnungssprache (Markup Language)_ ist eine Computersprache, die verw
 </div>
 
 1. :computer: `<!DOCTYPE html>` - Definiert, dass es sich hier um ein HTML5 Dokument handelt. :exclamation: Es muss immer in der ersten Zeile stehen. :exclamation:
-2. `<html>` ist das Wurzelelement, welches alle anderen umschließt. Am Ende des Dokuments wird dies mit `</html>` wieder geschlossen.
+2. `<html>` ist das Wurzelelement, welches alle anderen umschließt. Am Ende des Dokuments wird dies mit `</html>` wieder geschlossen. Das `<html>` Tag sollte immer ein `lang`-Attribute benutzen um die Hauptsprache des Dokuments zu definieren.
 3. Der Abschnitt `<head></head>` umfasst Metadaten die nicht direkt sichtbar sind.
 4. :small_red_triangle: `<title>`- Ist der Name, welcher im Tab des Browsers angezeigt wird.
 5. Der Abschnitt `<body></body>` definiert den Inhalt der Seite und ist Container für alle sichtbaren Elemente.

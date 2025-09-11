@@ -8,7 +8,7 @@ icon: simple/materialformkdocs
 
     Eine einfache möglichkeit um eine schöne Dokumentationsseite für ihr Projekt zu erstellen.
     
-    :link: [Offizielle Webseite](https://squidfunk.github.io/mkdocs-material/)
+    :link: [Offizielle Webseite](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
 
 ## Einrichten
 
@@ -28,11 +28,11 @@ icon: simple/materialformkdocs
 
 ### Project layout
 
-    pyproject.toml # The projects config file.
-    mkdocs.yml    # The mkdocs configuration file.
+    pyproject.toml  # The projects config file which was created by uv.
+    mkdocs.yml      # The mkdocs configuration file.
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        index.md    # The documentation homepage.
+        ...         # Other markdown pages, images and other files.
 
 
 ## Konfigurieren
@@ -46,6 +46,14 @@ icon: simple/materialformkdocs
 
 ## Veröffentlichen
 
+Um die Website nun zu veröffentlichen können wir z.B :material-github: [github-pages](https://docs.github.com/de/pages) verwenden.
+
+Legen Sie dazu die Datei `.github/workflows/ci.yml` in ihrem Projektordner an und fügen Sie den Inhalt wie im [offiziellen ](https://squidfunk.github.io/mkdocs-material/publishing-your-site/){:target="_blank"} Tutorial beschrieben dort ein.
+
+Stellen Sie sicher das in ihrem Github Repo unter _Settings :material-arrow-right: Pages_ die Einstellung __Deploy from a branch__ ausgewählt haben. Als Branch sollte `gh-pages` und `/(root)` eingestellt sein.
+
+!!! tip
+    Siehe Video bei Minute :material-timer: 22:20 
 
     
 ## Alternativen

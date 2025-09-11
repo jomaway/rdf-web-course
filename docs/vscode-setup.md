@@ -13,5 +13,5 @@ Aber um uns das Leben etwas einfacher zu machen installieren wir zwei Erweiterun
 
 !!! task 
 
-    + Extension `Live Preview` von Microsoft installieren.
-    + Extension `Prettier` installieren.
+    + Extension [`Live Preview`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) von Microsoft installieren.
+    + Extension [`Prettier - Code formatter`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) von Prettier installieren.
