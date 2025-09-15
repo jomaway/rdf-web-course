@@ -87,7 +87,7 @@ nav:
     - VSCode Setup: vscode-setup.md
   - HTML:
     - Basics: html/basics.md
-    - Elements: html/elements.md
+    - Semantisches HTML: html/elements.md
     - Forms: html/forms.md
   - CSS:
     - Basics: css/basics.md

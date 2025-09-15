@@ -13,7 +13,7 @@ Eine _Auszeichnungssprache (Markup Language)_ ist eine Computersprache, die verw
 <div class="annotate" markdown>
 ``` html title="Ein sehr einfaches HTML Document"
 <!DOCTYPE html> (1)
-<html lang="de"> (2)
+<html> (2)
 
   <head> (3)
     <title>RDF - Rudolf Diesel Fachschule</title> (4)
@@ -100,3 +100,70 @@ Das `href` ist ein Attribut. Es liefert die Link-Informationen zum `<a>`-Tag.
     - Hierarchie sichtbar machen: Schachtelte Elemente sollten jeweils um eine Ebene eingerückt werden, damit die Struktur klar erkennbar ist.
 
     - Lesbarkeit fördern: Klarer, ordentlich formatierter Code hilft, Fehler zu vermeiden und die Wartung zu erleichtern.
+
+## Grundgerüst 
+
+<div class="annotate" markdown>
+``` html title="Ein minimales Grundgerüst"
+<!DOCTYPE html>
+<html lang="de"> (3)
+
+  <head>
+    <meta charset="utf-8" /> (1)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> (2)
+    <title>aussagekräftiger Seitentitel</title>
+  </head>
+
+  <body>
+    <!-- Sichtbarer Inhalt! -->
+  </body>
+
+</html> 
+```
+</div>
+
+1. Zeichenkodierung damit alle Inhalte richtig dargestellt werden können. z.B. Emojis. 😀. Innerhalb der ersten 1024 Bytes nötig. Gleiches Dateiformat speichern.
+2. Einstellungen um Darstellung auf mobilen Geräten zu verbessern.
+3. Default Language der Webseite.
+
+<small>Quelle: [selfhtml](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Grundger%C3%BCst) (angepasst)</small>
+
+## Teamwork - The Web Design Tripple
+
+An dieser Stelle soll nur ein kurzes Beispiel für das Zusammenspiel von HTML, CSS und JS aufgezeigt werden. Dies wird dann erst in den Kapiteln CSS und JS weiter vertieft.
+
+
+<div class="annotate" markdown>
+```html title="How do HTML, CSS and JS work?"
+<html>
+    <head>
+        <title>My Webpage</title> 
+        (1)<style> 
+          body {
+            text-align: center;
+          }
+          h1 {
+            color: #333;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <p>This is a simple HTML, CSS, and JavaScript webpage.</p>
+        <button onclick="displayAlert()">Click me!</button>
+        (2)<script>
+          function displayAlert() {
+    	alert('Hello World!');
+          }
+        </script>
+    </body>
+</html>
+``` 
+</div>
+
+1. Mit dem `<script>`-Tag kann CSS direkt in die HTML Seite eingebunden werden. Diese werden in der Regel innerhalb des `<head>` definiert und normalerweise in eine eigene Datei ausgelagert.
+2. Der `<script>`-Tag ermöglicht das einbinden von JavaScript um der Webseite interaktivität hinzuzufügen.
+
+<small>Quelle: [Programiz](https://www.programiz.com/html/web-design-basics) </small> 
+
+

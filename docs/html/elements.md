@@ -1,16 +1,102 @@
-# HTML Elements
+# Semantisches HTML
 
-## Block vs Inline
+## HTML Elemente
 
-HTML elements can be broadly categorized into one of two categories:
+Es gibt eine Vielzahl von HTML-Elementen. Nicht alle werden immer benötigt.
+
+[MDN - HTML Elemte Referenz](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements)
+
+Einige wie `<h1>` und `<p>`, `<a>` haben wir schon kennengelernt. Hier zwei weitere Beispiele:
+
+- `<div></div>` - Container Element (Wie eine Box) - Wird oft für Layouts verwendet.
+- `<span></span>` - Inline-Container für Textinhalte. - Verwendung für Styling.
+
+### Block vs Inline
+
+HTML Elemente können grob in zwei Gruppen eingeteilt werden.
 
 - Inline Elements: `<span>`, `<a>`, `<strong>`, `<img>` etc.
 - Block Elements: `<p>`, `<div>`, `<h1>`, `<figure>` etc.
 
+### Beispiel
 
-## Semantiv vs Non-Semantic
+Schauen wir uns folgendes Beispiel an:
 
-HTML-Tags lassen sich grob in semantische und nicht-semantische Elemente unterteilen. Semantische Tags geben dem Inhalt eine klare Bedeutung und Struktur (z. B. `<header>`, `<article>`), während nicht-semantische Tags hauptsächlich für Layout und Styling verwendet werden (z. B. `<div>`, `<span>`).
+!!! example
+    ```html
+    <div>
+    <span>Three words</span>
+    <div>
+        <a>one word</a>
+        <a>one word</a>
+        <a>one word</a>
+        <a>one word</a>
+    </div>
+    </div>
+    <div>
+    <div>
+        <div>five words</div>
+    </div>
+    <div>
+        <div>three words</div>
+        <div>forty-six words</div>
+        <div>forty-four words</div>
+    </div>
+    <div>
+        <div>seven words</div>
+        <div>sixty-eight words</div>
+        <div>forty-four words</div>
+    </div>
+    </div>
+    <div>
+    <span>five words</span>
+    </div>
+    ```
+
+    !!! question
+        Welche Struktur können Sie in der Webseite erkennen?
+
+
+
+## Semantisches vs nicht-semantisches HTML
+
+Im obigen Beispiel ist der Kontext nicht sehr einfach zu erkennen. Lassen Sie uns die gleiche Webseite mit semantischen Elementen neu schreiben.
+
+
+```html title="Semantische Version"
+<header>
+  <h1>Three words</h1>
+  <nav>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+    <a>one word</a>
+  </nav>
+</header>
+<main>
+  <header>
+    <h2>five words</h2>
+  </header>
+  <section>
+    <h2>three words</h2>
+    <p>forty-six words</p>
+    <p>forty-four words</p>
+  </section>
+  <section>
+    <h3>seven words</h3>
+    <p>sixty-eight words</p>
+    <p>forty-four words</p>
+  </section>
+</main>
+<footer>
+  <p>five words</p>
+</footer>
+```
+
+!!! warning "Wichtig"
+    Verwenden Sie für eine besser Lesbarkeit und Struktur möglichst immer semantische HTML Tags wie `<header>`, `<main>`, `<footer>`, `<nav>`, `<article>`, `<section>` wenn sinnvoll. Dies ist auch für Screenreader und das Ranking in der Suchmaschine relevant.
+
+HTML-Tags lassen sich grob in semantische und nicht-semantische Elemente unterteilen. __Semantische Tags__ geben dem Inhalt eine <mark>klare Bedeutung und Struktur</mark> (z. B. `<header>`, `<article>`), während __nicht-semantische Tags__ hauptsächlich für <mark>Layout und Styling</mark> verwendet werden (z. B. `<div>`, `<span>`).
 
 Hier sind zwei nicht vollständige Listen mit typischer Zuordnung.
 
@@ -57,11 +143,14 @@ Hier sind zwei nicht vollständige Listen mit typischer Zuordnung.
 
 
 
-
 ## Aufgabe
 
 !!! task "Aufgabe"
     Erstellen Sie eine HTML-Seite über die Fortbildung als Wirtschaftsinformatiker an der RDF.
 
+    Die Webseite soll einen klassischen Aufbau mit Titel, Inhalt, Fusszeile haben.
+
     - Nutzen Sie semantisches HTML.
-    - Nutzen Sie mindestens einmal `<details>` und `<summary>` um den Inhalt auszublenden.
+    - Fügen Sie mindestens ein Bild ein.
+    - Nutzen Sie mindestens eine Aufzählungsliste.
+    - Nutzen Sie mindestens einmal `<details>` und `<summary>` um Inhalt auszublenden.
