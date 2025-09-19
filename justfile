@@ -5,4 +5,4 @@ default:
 
 # Show the documentation in a browser
 show: 
-    uv run mkdocs serve --open
+    uvx --with mkdocs-material mkdocs serve --open

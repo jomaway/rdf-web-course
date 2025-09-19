@@ -15,18 +15,17 @@ tags:
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xlABhbnNrfI?si=HqoYkVmZGuMznjB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption><a href="https://www.youtube.com/watch?v=xlABhbnNrfI">Full Video Tutorial</a>
+<figcaption><a href="https://www.youtube.com/watch?v=xlABhbnNrfI">Full Video Tutorial - by James Willett</a>
 </figcaption></figure>
 
 ## Eine neue Seite anlegen.
 
-!!! task "Schritte"
+Sie können der Anleitung auf der offiziellen Webseite folgen und `mkdocs` global installieren oder das Tool `uv` nutzen. 
 
-    1. Projekt erstellen: `uv init my-big-project`
-    2. In Verzeichnis wechseln: `cd my-big-project`
-    2. MKDocs hinzufügen: `uv add mkdocs-material`
-    4. Neues MKDocs projekt anlegen `uv run mkdocs new .`
-    5. Testversion öffnen `uv run mkdocs serve`
+!!! task "Schritte mit dem Tool `uv`"
+
+    1. Neues Projekt anlegen: `uvx --with mkdocs-material mkdocs new my-big-project`
+    2. Vorschau öffnen: `uvx --with mkdocs-material mkdocs serve --open`
 
 <div class="grid cards" markdown>
 
@@ -46,7 +45,6 @@ tags:
 
     Nach dem erstellen eines neuen Projekts sollten Sie folgende Verzeichnisstruktur vorfinden.
 
-        pyproject.toml  # The projects config file which was created by uv.
         mkdocs.yml      # The mkdocs configuration file.
         docs/
             index.md    # The documentation homepage.
